@@ -1,0 +1,6 @@
+.cont{
+   background-color:#D9D9D9;
+}
+tr:nth-child(even){
+   background-color: lightblue 
+}

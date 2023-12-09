@@ -1,0 +1,24 @@
+<!-- <button (click)="add()">Añadir game</button> -->
+<div class="row space-beetween" style="align-items: start;">
+   @for (item of Tareas; track $index) {
+   <div class="card bg-dark" style="width: 19rem; height: 200px; margin: auto; margin-top: 2rem;">
+      <div class="card-body">
+         <h5 class="card-title text-warning">{{item.name_asignatura}}</h5>
+         <h6 class="card-subtitle mb-2 text-muted text-white-50">Doc: {{item.name_docente}}</h6>
+         <p class="card-text col" style="color: rgb(255, 255, 255);">Total de tareas Pendientes:</p>
+         <div class="container space-beetween">
+            <span style="margin-right: 5px;">
+               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(242, 238, 238, 1);transform: ;msFilter:;"><path d="M12 6c-3.309 0-6 2.691-6 6s2.691 6 6 6 6-2.691 6-6-2.691-6-6-6zm0 10c-2.206 0-4-1.794-4-4s1.794-4 4-4 4 1.794 4 4-1.794 4-4 4z"></path><path d="M12 2C6.579 2 2 6.579 2 12s4.579 10 10 10 10-4.579 10-10S17.421 2 12 2zm0 18c-4.337 0-8-3.663-8-8s3.663-8 8-8 8 3.663 8 8-3.663 8-8 8z"></path><path d="M12 10c-1.081 0-2 .919-2 2s.919 2 2 2 2-.919 2-2-.919-2-2-2z"></path></svg>
+               <a routerLink="ver-tarea/{{item.name_asignatura}}" class="card-link col" >Ver Tareas</a>
+            </span>
+            <span>
+               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(242, 238, 238, 1);transform: ;msFilter:;"><path d="M20 2H8a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zm-6.933 12.481-3.274-3.274 1.414-1.414 1.726 1.726 4.299-5.159 1.537 1.281-5.702 6.84z"></path><path d="M4 22h11v-2H4V8H2v12c0 1.103.897 2 2 2z"></path></svg>
+               <a routerLink="add-tarea/{{item.name_asignatura}}" class="card-link col" >Add Tarea</a>
+            </span>
+            
+         </div>
+      </div>
+   </div>
+   }
+</div>
+<router-outlet></router-outlet>

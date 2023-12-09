@@ -1,0 +1,50 @@
+<div class="row">
+   <div class="mt-2 pd-4 card card-body col mb-3">
+      <div class="container cont mt-4">
+         <h2>Crea una Nueva Asignatura</h2>
+         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. In obcaecati hic tempora reprehenderit ipsum
+            consequuntur autem nihil expedita voluptatum fugiat quisquam quis cumque ipsa laudantium qui, unde
+            repudiandae consectetur magni.</p>
+      </div>
+      <div class="container cont mt-4">
+         <form [formGroup]="asignatura">
+            <!-- Email input -->
+            <div class="form-outline mb-4" style="margin-top: 15px;">
+               <input type="text" formControlName="name_asignatura" id="form1Example1" class="form-control" />
+               <label class="form-label" for="form1Example1">Nombre de la Asignatura</label>
+            </div>
+
+            <!-- Nombre del Docente input -->
+            <div class="form-outline mb-4">
+               <input type="text" formControlName="name_docente" id="form1Example2" class="form-control" />
+               <label class="form-label" for="form1Example2">Nombre del Docente</label>
+            </div>
+
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-success btn-block mb-2" (click)="add()">Registro</button>
+         </form>
+      </div>
+   </div>
+   <!-- <hr> -->
+   <div class="container align-items-center card card-bod col mb-3">
+      <h2>Listado de Asignatura</h2>
+      <table>
+         <thead>
+            <tr class="bg-dark" style="color: white;">
+               <th>Nombre de la Asignatura</th>
+               <th>Nombre del Docente</th>
+               <th>Acciones</th>
+            </tr>
+         </thead>
+         <tbody>
+            @for (item of Tareas; track $index) {
+            <tr>
+               <td>{{item.name_asignatura}}</td>
+               <td>{{item.name_docente}}</td>
+               <td><button class="btn btn-danger" (click)="delA(item.id)">Eliminar</button></td>
+            </tr>
+            }
+         </tbody>
+      </table>
+   </div>
+</div>

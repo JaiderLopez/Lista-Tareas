@@ -1,0 +1,37 @@
+<div class="container mt-4">
+   <div class="card bg-dark">
+      <div class="card-body">
+         <div class="subject">
+            <h2 class="text-warning">{{id}} </h2>
+         </div>
+         <div style="margin-top: 1rem;">
+            <div class="container cont mt-4">
+               <form [formGroup]="asignatura">
+                  <!-- Email input -->
+                  <!-- <div class="form-outline mb-4" style="margin-top: 15px;">
+                     <input type="text" formControlName="name_asignatura" id="form1Example1" class="form-control"/>
+                     <label class="form-label text-light" for="form1Example1">Nombre de la Asignatura</label>
+                  </div> -->
+      
+                  <!-- Nombre del Docente input -->
+                  <div class="form-outline mb-4">
+                     <input type="text" formControlName="title" id="form1Example2" class="form-control" required/>
+                     <label class="form-label text-light" for="form1Example2">Nombre de la tarea</label>
+                  </div>
+                  <div class="form-outline mb-4">
+                     <input type="text" formControlName="description" id="form1Example2" class="form-control" />
+                     <label class="form-label text-light" for="form1Example2">Descripcion de la tarea</label>
+                  </div>
+                  <div class="form-outline mb-4">
+                     <input type="date" formControlName="fecha_entrega" id="form1Example2" class="form-control" />
+                     <label class="form-label text-light" for="form1Example2">fecha de entrega</label>
+                  </div>
+      
+                  <!-- Submit button -->
+                  <button type="submit" class="btn btn-success btn-block mb-2" (click)="addTarea()">Añadir Tarea</button>
+               </form>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
